@@ -1,0 +1,24 @@
+set number
+set wildmode=list:longest
+set incsearch
+set hlsearch
+set showbreak=...
+set wrap linebreak nolist
+nmap <Down> gj
+nmap <Up> gk
+color murphy
+syntax on
+set mouse=a
+set incsearch
+map q :quit<CR>
+map <C-s> :w<CR>
+set autoindent
+set laststatus=2
+set confirm
+set title
+set mouse=a
+set background=dark
+set showmatch
+set ignorecase 
+set ruler
+set complete+=kspell
