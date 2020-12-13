@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="pt-br">
+    <head>
+        <meta charset="uft-8">
+        <title>Operadores</title>
+    </head>
+    <body>
+        <h1>Operadores JS</h1>
+        <ul>
+            <strong>Operadore Aritimeticos</strong>
+            <ol>
+                <li> + mais </li>
+                <li> - menos</li>
+                <li> * multiplicação </li>
+                <li> / divisão </li>
+                <li> % resto </li>
+                <li> ** exponeciação </li>
+            </ol>
+            <br>
+           
+            <strong>Operadore Relacionais</strong>
+            <ol>
+                <li> <p> retornar apenas valores boleanos, verdadeiro e falso(true e false).</p></li>
+                <li> > maior </li>
+                <li> <  menor </li>
+                <li> >= maior ou igual </li>
+                <li> <= menor ou igual  </li>
+                <li> == igual      </li>
+                <li> != diferente </li>
+                <li> === identico </li>
+            </ol>
+            <br>
+
+            <strong>Operador Logico</strong>
+            <ol>
+                <li> ! não = negação eu nao quero uma caneta azul(false) </li>
+                <li> && e =  conjunção eu quero uma caneta azul e uma vermlha (tem que ser as duas(false)) </li>
+                <li>|| or/ou =  disjunção quero uma caneta azul ou uma vermelha(qualquer uma serve(true)) </li>
+            </ol>
+            <br>
+
+         <p><strong>Orden de Precedência</strong></p>
+           <ol> 
+            <li>()</li>
+            <li>**</li>
+            <li> * / % </li>
+            <li> + - </li>
+          </ol>
+          <br>
+
+          <strong>Operador Ternario</strong>
+          <ol>
+              <p> serve para subistituir o if em expressões pequenas</p>
+              <li> ? : </li>
+          </ol>
+        </ul>
+        
+     <script>
+            // operadores atitimeticos
+            let n = 4;
+            n+= 8;
+            n -= 2;
+            n *= 5;
+            n /= 2;
+            n **= 2;
+            n %=2;
+            n ++; // incremento
+            n --; // decremento
+            console.log(n); 
+            
+            // Operadore Relacionair
+            let m = 3
+            m > 1;// maior
+            m < 2; // menor
+            m >= 3; // maior ou igual
+            m <= 7; // menor ou igual
+            m == 3; // igual
+            m != 5; // diferente
+            m === 3; // identico vai verficar o valor e o tipo se é number ou string
+            console.log(m);
+            
+            // operadores Logicos
+            let v =2;
+            let c = 5;
+            v ! c;
+            v && c;
+            v || c;
+            
+            // operador ternario. serve para substituir um if
+            let v = 10;
+            v == 10 ? "sim" : "não"; // se v é igual a 10
+     </script>
+    </body>
+</html>

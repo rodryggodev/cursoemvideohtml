@@ -16,17 +16,37 @@
          </code>
          <p> Outra coisa muito importante na hora de fazer calculo em javascript, é que temos que formatar os valores, já que se isso não acontecer os valores passados ainda que sejam number(numero). Caso não tenha essa formatação irá ser lido como uma string e não era fazer a soma e sim uma contatenação, e o valor esperado não será somado e sim irão se juntar.</p>
     
-         <p>Ex: 10+10 não irá ser igual a 20, mas sim irá mostrar 1010 para que isso não ocorra vamos usar o format.</p>
+         <p>Ex: 10+10 não irá ser igual a 20, mas sim irá mostrar 1010 para que isso não ocorra vamos usar o format.Para os numeros inteiros iremos usar o Number.parseInt() e Number.parseFloat() para numeros reais. Mas essas duas opções servem so mente para valores inteiros e real, caso eu queria misturar os dois valores isso não irá funcionar.</p>
+         <p>Com a chegada do ecma6 tem a função Number() que é a mais usada, e ela tem a função de saber automaticamento se os valores passados são reais ou inteiros.</p>
+         <p>String() ou n.toString() para converter de number para string</p>
+         
+         <h1>Interpolação</h1>
+         <p> Interpolação são maneiras de como "concatenar variavel a uma saida de dados(output), em um alert,console.log".<p>
+         <code>
+             let s='nome';
+            <ul>
+                <li> 'eu estou aprendendo s'// não faz interpolação, aqui vai sair o esse e nao o valor da variavel.</li>
+                <li> 'eu estou aprendendo' + s // concatenação e vai mostrar o valor da variavel corretamente</li>
+                <li> `eu estou aprendendo ${s}` // faz interpolação e a maneira atualizada de fazer template string</li>
+                <li> s.length // quantos caracteres a string tem.</li>
+                <li> document.write(`seu nome ${variavel.length()}`);
+                <li> s.toUpperCase() // tudo para "MAIÚSCULO"</li>
+                <li> document.write(`seu nome ${variavel.toUppercase()}`);</li>
+                <li> s.toLowerCase() // tudo para minusculo</li>
+                <li> document.write(`seu nome ${variavel.toLowerCase()}`);</li>
+            </ul>
+         </code>
             <script>
                 /*let nome = window.prompt("Qual o seu nome?");
                 window.alert('Bem vindo ' + nome);
                 */
                 // calculo
                 
-                let n1 = window.prompt('informe um valor:');
-                let n2 = window.prompt('segundo valor:');
-                let soma = n1 + n2;
-                alert('A soma entre n1 e n2, é:  ' + soma);
+                let n1 = Number.parseInt(window.prompt('informe um valor:'));
+                let n2 = Number.parseInt(window.prompt('segundo valor:'));
+                let n3 = Number(window.prompt('terceiro valor'));
+                let soma = n1 + n2 + n3;
+                alert('A soma entre n1, n2, n3 , é:  ' + soma);
             </script>   
         </body>
 </html>
