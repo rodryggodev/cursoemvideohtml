@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="pt-br">
+    <head>
+        <meta charset="uft-8">
+        <title>Eventos Dom</title>
+        <style>
+            div#container{
+                font: normal  16px Arial;
+                background: #FF4500;
+                color: #F0F8FF;
+                width: 200px;
+                height: 200px;
+                line-height: 200px;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="container">
+            Carregando...
+        </div>
+        <p> Eventos que posso fazer com o mouse dentro do meu html usando js</p>
+        <ol>
+            <li> mouseenter: quando o mouse entrar no elemento/div/class</li>
+            <li> mousemove: quando movimenta o mouse dentro do elemento</li>
+            <li> mousedown: quando aperto e seguro o botão do mouse</li>
+            <li> mouse up: ... depois vou pesquisar</li>
+            <li> click: quando eu clicar com o mouse</li>
+            <li> mouseout: quando eu sair com mouse de dentro do elemento</li>
+        </ol>
+        <hr>
+        <p>quando for usar onlick="qualquercoisa" dentro do html o (qualquercoisa), tem que ser o nome da função dentro do javascript.Como tá no codigo abaixo.<p>
+        <p> podemos disparar evendo pelo addEventListener(), a sua função é ficar ouvindo que disparam eventos.</p>
+        <p> Lembrando que com addeventListener('click') o click é referene ao o onlick que fica dentro da tag e clicar é referente ao parametro que o onclick recebe, ex: div onclick="qualquernome". Lá no js temo que colocar variavelqualquer.addEventListener('click', qualquercoisa).<p>
+     <script>
+         // nao é a maneira mais correta de fazer o escopo da função, colocando a variavel fora
+         let a = document.getElementById('container');// posso usar em mais de uma função, mas nao é o correto
+            
+            a.addEventListener('click',clicar); // para manipular os evento sem ser pelo html
+            
+         function clicar(){
+             a.innerText = 'CHAMA NO JS CARAÍ!!!';
+             a.style.background='blueviolet';// vai mudar a cor do quadrado
+            }
+     </script>
+    </body>
+</html>

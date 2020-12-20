@@ -6,5 +6,12 @@
     </head>
     <body>
         <h1>Imagem Dinamicas</h1>
+        <p> vamos usar uma tag nova chamada picture tem como função carregar uma imagem "responsiva",mas para que isso possa funcionar temos que ter uma mesma imagem só que de tamanhos difrentes. Uma grande,média e pequena.</p>
+        <p> E tem que começar com a imagem pequena, depois a média e por ultimo a grande, que tem que ser a "principal", isso vai variar de acordo com o projeto e para qual será a plataforma.<p>
+        <picture>
+            <source media="(max-width: 750px)" srcset="img/pequena.jpeg" type="img/jpeg">
+            <source media="(max-width:1024px)" srcset="img/media.jpeg" type="img/jpg">
+            <img src="img/Grande.jpg" alt="uma imagem grande">
+        </picture>
     </body>
 </html>

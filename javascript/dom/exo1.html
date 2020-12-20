@@ -1,0 +1,69 @@
+<!docype html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <title>EX DOM</title>
+        <style>
+            body{
+                background: #483D8D;
+                color: #F0F8FF;
+                font: normal 16px Arial;
+            }
+        </style>
+    </head>
+    <body>
+        <h1> Iniciando estudo com DOM </h1>
+        <p>Document Object Model </p>
+       <p> Aprendendo a usar <strong>DOM</strong> em javascript</p>
+       
+       <div id="lista">
+         <p><em><strong>Como podemos acessas os elementos html direto no javascrtip</strong></em>
+            <ol name="teste">
+                <li><em> por Marca </em> </li>
+                <li><em> por Id </em></li>
+                <li><em> por Name </em></li>
+                <li><em> por Classe </em></li>
+                <li><em> por Seletor</em></li>
+             </ol>
+       </div>
+       <p> Por <em><strong>Marca</strong></em> quando chamamos o elemento pela tag ex: <em> div, h1, img, ul, ol... </em> <code> getElementsByTagName('div').</p>
+       <p>Por <em><strong>Id</strong></em> quando chamamos pelo id que damos nas tags, lembrando que cada tag tem seu id(unido) <code> getElementById()</code>. </p>
+       <p>por <em><strong>Class</strong></em> quando chamamos pelo classe das tags, lembando que varias tags podem ter o mesmo nome de classe <code> getElementsByClassName() </code>. </p>
+       <p>por <em><strong>Seletor</strong></em> quando chamamos <code> document.querySelector('div#nomedoid'). document.querySelectorAll()</code> esse all() é o plural. </p>
+        <hr>
+
+        <p> Quando for por marca e tem mais de uma gat podemos definir qual será modificada usando uma numerção ou indice assim como no array <strong> ex: se tiver mais de uma tag p, e eu quero usar só a primeira fazemos assim </strong> <code>getElementsByTagName('p')[0]</code>. Lembrando que esse final zero é equivalente a primeira tag p do meu body.</p>
+        <p>Lembrando que quando vamos usar tags com o mesmo nome, temos que colocar getElementsBy. O getelements(s) tem que vim no plutal.</P>
+        <p id="texte">inner.Text = mostra a tag sem formatação ex tenh um strong. Já a innerHTML mostra tudo.</p>
+        <hr>
+        <div class="text"> Clique em mim </div>
+        <hr>
+        <script>
+            //por marca. pela tag.
+            let p1 = document.getElementsByTagName('p')[0]; // pegando a primeia tag p do html, caso queria outra só mudar de 0 pra 1
+            window.document.write(p1.innerText); // aqui ele vai replicar o conteudo da tag p
+        document.write('-----------------------------------------------------------------------');
+            
+            // por id.
+            let id = document.getElementById('lista');// pegando pelo id que é unico de cada tage 
+            document.write(id.innerHTML); // aqui vais mostrar tudo que tem na tag html ate as outras tags
+            document.write('---------------------------------------------------------------------------------------------');
+            
+            // por name.
+            let c = document.getElementsByName('teste'); // pegando pelo nome da class
+            c.innerText = 'Ola';// modificando o conteudo da tag html pelo js
+            document.write('-----------------------------------------------------------------------------------------------')
+            
+            //por class
+            let texto = document.getElementsByClassName('text');
+            texto.innerText = 'ooooi';
+            
+            // por selector é a mais correta quando for div tem que ser (div#nome id ou  tem que ter o #) e quando for class(class.qualquercoisa_) par class tem que ter um.
+            let a = document.querySelector('p#texte');
+            // let document.querySelector(class.text);
+            // document.querySelectorAll() é o plural da parada
+            a.innerHTML="oi";
+        </script>
+    </body>
+</html>
+
